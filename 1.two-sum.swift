@@ -71,5 +71,3 @@ class Solution {
     }
 }
 // @lc code=end
-
-print("hoge")
