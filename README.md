@@ -5,8 +5,8 @@
 - VSCode
 - VSCode Extensions
   - LeetCode
-  - Swift Language
-  - SourceKit-LSP
-  - CodeLLDB
+  - Swift Language (Syntax Highlight)
+  - SourceKit-LSP (IntelliSense)
+  - CodeLLDB (Debug)
 
 <img src="./misc/top.png">
