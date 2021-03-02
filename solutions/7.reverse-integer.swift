@@ -46,8 +46,14 @@
 // @lc code=start
 class Solution {
     func reverse(_ x: Int) -> Int {
-        
+        let isNegative = x < 0
+        let r = Int(String(String(abs(x)).reversed()))!
+        if (Int(Int32.min)...Int(Int32.max)).contains(r) {
+            return isNegative ? -r : r
+        } else {
+            return 0
+        }
     }
 }
 // @lc code=end
-
+print(Solution().reverse(1534236469))
