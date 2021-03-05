@@ -75,8 +75,7 @@ class Solution {
             }
         }
         if wrapup {
-            // return [1] + digits
-            return digits
+            return [1] + digits
         } else {
             return digits
         }
@@ -84,12 +83,10 @@ class Solution {
 }
 // @lc code=end
 
+assert(Solution().plusOne, input: [1, 2, 9, 9, 9], expect: [1, 3, 0, 0, 0])
+assert(Solution().plusOne, input: [9], expect: [1, 0])
+
 func assert<Input, Output: Equatable>(_ solution: (Input) -> Output, input: Input, expect: Output) {
     let result = solution(input) == expect ? "\u{001B}[0;32m" + "[AC]" + "\u{001B}[0;0m" : "\u{001B}[0;31m" + "[WA]" + "\u{001B}[0;0m"
-    print(result, "Answer:", solution(input), "Expected Answer:", expect)
+    print(result, "\nAnswer:         ", solution(input), "\nExpected Answer:", expect)
 }
-
-assert(Solution()., input: , expect: )
-
-assert(Solution().plusOne, input: [1, 2, 9, 9, 9], expect: [1, 3, 0, 0, 0])
-assert(Solution().plusOne, input: [9], expect: [1, 1])
