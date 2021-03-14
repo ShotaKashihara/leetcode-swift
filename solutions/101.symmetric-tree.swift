@@ -71,6 +71,7 @@
  * }
  */
 class Solution {
+
     func values(_ root: TreeNode?, _ inverse: Bool, ans: [Int?] = []) -> [Int?] {
         guard let root = root else { return ans + [nil] }
         let rarray = values(root.right, inverse)
