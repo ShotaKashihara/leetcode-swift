@@ -56,6 +56,19 @@
  * 
  */
 
+public class TreeNode {
+    public var val: Int
+    public var left: TreeNode?
+    public var right: TreeNode?
+    public init() { self.val = 0; self.left = nil; self.right = nil; }
+    public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+    public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+        self.val = val
+        self.left = left
+        self.right = right
+    }
+}
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -74,7 +87,14 @@
  */
 class Solution {
     func maxDepth(_ root: TreeNode?) -> Int {
-        
+        func dep(root: TreeNode?, depth: Int) -> Int {
+            guard let root = root else { return depth }
+            return max(
+                dep(root: root.right, depth: depth + 1),
+                dep(root: root.left, depth: depth + 1)
+            )
+        }
+        return dep(root: root, depth: 0)
     }
 }
 // @lc code=end
